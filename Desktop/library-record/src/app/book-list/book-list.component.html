@@ -1,0 +1,8 @@
+ <ul>
+    <li *ngFor="let book of books">
+        {{book.name}} - {{book.author}} 
+        <button (click)="editBook(book)">Edit</button>
+        <button (click)="deleteBook(book.id)">Delete</button>       
+    </li>
+</ul>
+<app-book-form></app-book-form>

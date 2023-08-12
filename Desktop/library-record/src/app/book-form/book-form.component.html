@@ -1,0 +1,20 @@
+<h2>{{ isEditing ? 'Editar Libro' : 'Crear Libro' }}</h2>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <label>Imagen URL:</label>
+  <input formControlName="image" type="text" />
+
+  <label>Nombre:</label>
+  <input formControlName="name" type="text" />
+
+  <label>Editorial:</label>
+  <input formControlName="editorial" type="text" />
+
+  <label>Género:</label>
+  <input formControlName="gender" type="text" />
+
+  <label>Autor:</label>
+  <input formControlName="author" type="text" />
+
+  <button type="submit">{{ isEditing ? 'Editar' : 'Crear' }}</button>
+  <button type="button" (click)="resetForm()">Cancelar</button>
+</form>
